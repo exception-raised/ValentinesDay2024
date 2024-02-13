@@ -6,15 +6,61 @@
 body {
     background-color: pink;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
 p {
-    color: white;
+    color: hotpink;
     overflow-x: hidden;
+    text-align: center;
+    font-size: 2em;
+}
+
+#flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    width: 100vw;
 }
 
 #textContainer {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    width: 80%; 
+    min-height: 7em;
+    max-width: 20em;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid rgb(0, 0, 0);
 }
+.cupid {
+    transition: top 0.5s ease, left 0.5s ease;
+    position: absolute;
+    width: 100px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://clipartcraft.com/images/valentines-clipart-cupid-1.png");
+}
+.rain-container {
+    position: relative;
+  }
+  
+  .rain-drop {
+    position: absolute;
+    width: 30px;
+    animation: falling 3s linear infinite;
+  }
+  
+  @keyframes falling {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 100vh;
+    }
+  }
+  
